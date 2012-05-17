@@ -1,0 +1,8 @@
+define KMACHINE qemuarma9
+define KTYPE standard
+define KARCH arm
+
+include ktypes/standard
+branch qemuarma9
+include qemuarma9.scc
+
