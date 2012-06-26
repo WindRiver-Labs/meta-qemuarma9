@@ -3,6 +3,7 @@ define KTYPE standard
 define KARCH arm
 
 include ktypes/standard
-branch qemuarma9
+branch arm-versatile-926ejs
+
 include qemuarma9.scc
 
