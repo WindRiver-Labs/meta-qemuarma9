@@ -1,5 +1,3 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}"
-
 include linux-windriver-qemu.inc
 
 KBRANCH_qemuarma9 = "standard/arm-versatile-926ejs"
