@@ -1,1 +1,1 @@
-TARGET_SUPPORTED_KTYPES = "standard preempt-rt"
+TARGET_SUPPORTED_KTYPES = "standard"
