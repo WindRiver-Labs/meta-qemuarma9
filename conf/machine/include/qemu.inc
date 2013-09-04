@@ -16,6 +16,7 @@ RDEPENDS_kernel-base = ""
 
 # Use a common kernel recipe for all QEMU machines
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-windriver"
+PREFERRED_VERSION_linux-windriver_forcevariable = "3.10%"
 
 EXTRA_IMAGEDEPENDS += "qemu-native qemu-helper-native"
 
