@@ -1,1 +1,1 @@
-TARGET_SUPPORTED_KTYPES = "standard"
+TARGET_SUPPORTED_KTYPES = "standard tiny"
