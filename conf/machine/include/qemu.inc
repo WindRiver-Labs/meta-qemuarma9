@@ -5,7 +5,7 @@ PCMCIA_MANAGER = "pcmciautils"
 PREFERRED_PROVIDER_virtual/xserver ?= "xserver-kdrive"
 PREFERRED_PROVIDER_virtual/libgl ?= "mesa-xlib"
 
-MACHINE_FEATURES = "apm alsa pcmcia bluetooth irda usbgadget screen"
+MACHINE_FEATURES = "alsa pcmcia bluetooth irda usbgadget screen"
 
 IMAGE_FSTYPES += "tar.bz2"
 
