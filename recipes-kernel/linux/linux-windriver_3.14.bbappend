@@ -1,1 +1,1 @@
-TARGET_SUPPORTED_KTYPES = "standard preempt-rt"
+include linux-windriver-qemu.inc
