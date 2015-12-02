@@ -135,6 +135,10 @@ $ make start-target TOPTS="-disk $PWD/export/qemuarma9-wrlinux-image-glibc-small
 
 The BSP can run on Simics Cortex-A9 model.
 
+For booting on Simics, dtb file has to be specified explicitly in the
+"make start-simics" ommandline by the below:
+TARGET_SIMICS_DTB=vexpress-v2p-ca9.dtb
+
 3.4.1 MMC Root
 --------------
 
@@ -146,6 +150,7 @@ instructions.
 For example, run the following command in the project directory:
 $ make start-simics TOPTS="-disk $PWD/export/qemuarma9-wrlinux-image-glibc-small-standard-dist.ext3" \
 	TARGET_VIRT_BOOT_TYPE=disk
+	TARGET_VIRT_BOOT_TYPE=disk TARGET_SIMICS_DTB=vexpress-v2p-ca9.dtb
 
 An alternative approach to generate virtual disk image and bootup commands
 are the below:
@@ -153,7 +158,8 @@ are the below:
 $ dd if=/dev/zero of=bootdisk bs=1 count=0 seek=3892314112
 $ ./scripts/fakestart.sh ./host-cross/sbin/mke2fs -F -t ext3 \
    -d export/dist bootdisk
-$ make start-simics TOPTS="-disk bootdisk" TARGET_VIRT_BOOT_TYPE=disk
+$ make start-simics TOPTS="-disk bootdisk" TARGET_VIRT_BOOT_TYPE=disk \
+	TARGET_SIMICS_DTB=vexpress-v2p-ca9.dtb
 
 3.4.2 Initramfs
 ---------------
@@ -166,7 +172,8 @@ The following command will start the system from the initramfs
 $ make start-simics TARGET_VIRT_BOOT_TYPE=custom \
         TARGET_VIRT_IP=none \
         TARGET_SIMICS_INITRD=`pwd`/initrd \
-        EX_TARGET_SIMICS_KERNEL_OPTS="rdinit=/sbin/init"
+        EX_TARGET_SIMICS_KERNEL_OPTS="rdinit=/sbin/init" \
+        TARGET_SIMICS_DTB=vexpress-v2p-ca9.dtb
 
 3.4.3 Known Issue
 -----------------
