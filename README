@@ -136,7 +136,7 @@ $ make start-target TOPTS="-disk $PWD/export/qemuarma9-wrlinux-image-glibc-small
 The BSP can run on Simics Cortex-A9 model.
 
 For booting on Simics, dtb file has to be specified explicitly in the
-"make start-simics" ommandline by the below:
+"make start-simics" commandline by the below:
 TARGET_SIMICS_DTB=vexpress-v2p-ca9.dtb
 
 3.4.1 MMC Root
